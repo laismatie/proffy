@@ -3,34 +3,53 @@ import React from 'react';
 import whatsappIcon from  '../../assets/images/icons/whatsapp.svg'
 
 import './styles.css';
+import api from '../../services/api';
 
-function TeacherItem(){
+export interface Teacher {
+    id: number;
+    avatar: string;
+    bio: string;
+    cost: number;
+    name: string;
+    subject:string;
+    whatsapp: string; 
+};
+interface TeacherItemProps{
+    teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({teacher}) =>{
+    function createNewConnection(){
+        api.post('connections', {
+            user_id: teacher.id,
+        })
+    }
+
     return(
         <article className="teacher-item">
                     <header>
-                        <img src="https://avatars0.githubusercontent.com/u/39318294?s=460&u=3fe150c488ccce18a8b1dd5832c35eef972b2990&v=4" alt="Laís Matie"/>
+                        <img src={teacher.avatar} alt={teacher.name}/>
                         <div>
-                            <strong>Laís Matie</strong>
-                            <span>Biologia</span>
+                            <strong>{teacher.name}</strong>
+                            <span>{teacher.subject}</span>
                         </div>
                     </header>
 
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        <br/><br/>
-                        Duis lacinia odio id nibh facilisis gravida. 
-                        Nullam ante purus, scelerisque et lectus eu, commodo facilisis mauris. 
-                    </p>
+                    <p>{teacher.bio}</p>
 
                     <footer>
                         <p>
                             Preço/hora
-                            <strong>R$ 50,00</strong>
+                            <strong>R$ {teacher.cost}</strong>
                         </p>
-                        <button type="button">
+                        <a 
+                            target="_blank" 
+                            onClick={createNewConnection} 
+                            href={`https://wa.me/${teacher.whatsapp}`}
+                        >
                             <img src={whatsappIcon} alt="WhatsApp"/>
                             Entrar em contato
-                        </button>
+                        </a>
                     </footer>
                 </article>
     )

@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-gesture-handler@~1.6.0
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @react-native-community/async-storage@~1.11.0
 
 PATH: 
-  C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Android\Sdk\platform-tools;C:\Android\Sdk\tools;C:\Program Files\Genymobile\Genymotion\tools;C:\Program Files (x86)\Yarn\bin\;C:\Users\Laís\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Laís\AppData\Local\Microsoft\WindowsApps;C:\Users\Laís\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2\bin;;C:\Users\Laís\AppData\Roaming\npm;C:\Users\Laís\AppData\Local\Yarn\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Users\Laís\AppData\Roaming\nvm;C:\Program Files\nodejs
+  C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Android\Sdk\platform-tools;C:\Android\Sdk\tools;C:\Program Files\Genymobile\Genymotion\tools;C:\Program Files (x86)\Yarn\bin\;%NVM_HOME%;%NVM_SYMLINK%;C:\Users\Laís\AppData\Local\Microsoft\WindowsApps;C:\Users\Laís\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2\bin;;C:\Users\Laís\AppData\Roaming\npm;C:\Users\Laís\AppData\Local\Yarn\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Users\Laís\AppData\Roaming\nvm;C:\Program Files\nodejs
 
 Yarn version: 
   1.22.0
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\dev\proffy\mobile\node_modules\@babel\compat-data\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'C:\dev\proffy\mobile\node_modules\@jest\console\node_modules\slash'
 
 npm manifest: 
   {
@@ -33,13 +33,14 @@ npm manifest:
       "@react-navigation/bottom-tabs": "^5.8.0",
       "@react-navigation/native": "^5.7.3",
       "@react-navigation/stack": "^5.9.0",
+      "axios": "^0.19.2",
       "expo": "~38.0.8",
       "expo-font": "~8.2.1",
       "expo-status-bar": "^1.0.2",
       "react": "~16.11.0",
       "react-dom": "~16.11.0",
       "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
-      "react-native-gesture-handler": "~1.6.0",
+      "react-native-gesture-handler": "^1.7.0",
       "react-native-reanimated": "~1.9.0",
       "react-native-safe-area-context": "~3.0.7",
       "react-native-screens": "~2.9.0",
@@ -1293,6 +1294,14 @@ Lockfile:
     version "0.1.10"
     resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.10.tgz#5dda643e19e587793bc2034dd9bf7398ad43d401"
     integrity sha512-rk4sWFsmtOw8oyx8SD3KSvawwaK7gRBSEIy2TAwURyGt+3TizssXP1r8nx3zY+R7v2vYYHXZ+k2/GULAT/bcaQ==
+  
+  "@react-navigation/bottom-tabs@^5.8.0":
+    version "5.8.0"
+    resolved "https://registry.yarnpkg.com/@react-navigation/bottom-tabs/-/bottom-tabs-5.8.0.tgz#d7386809bceeead0adcaacf61b6563be9cefd5cb"
+    integrity sha512-geF/FSIg6cArY5jLwJJZrp7PDzLoSrONkCgq9n/4yKxtQapB/Pn5ljSHCNRGNkkb/+g8zqRQmEL5yX4DOja0OA==
+    dependencies:
+      color "^3.1.2"
+      react-native-iphone-x-helper "^1.2.1"
   
   "@react-navigation/core@^5.12.3":
     version "5.12.3"
